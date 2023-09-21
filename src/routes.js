@@ -1,9 +1,10 @@
-import {createWebHistory,createRouter} from 'vue-router'
+import {createWebHashHistory,createRouter} from 'vue-router'
 const HomePage = () => import('./views/HomePage.vue')
 const AboutPage = () => import('./views/AboutPage.vue')
 const JobPage =() => import('./views/JobPage.vue')
 const JobDetails=() => import('./components/JobDetails.vue')
 const NotFound=() => import( './components/PageNotfound.vue')
+
 const routes=[
     {
         name:'HomePage',
@@ -33,7 +34,7 @@ const routes=[
   
 ]
 const router = createRouter({
-    history:createWebHistory(),
+    history:createWebHashHistory(),
     routes
 });
 export default router;
